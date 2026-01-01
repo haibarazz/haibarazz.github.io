@@ -1,28 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的作品集</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品集 | [你的名字]</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1 { color: #333; }
-        .project { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        :root { --primary: #2563eb; --bg: #f8fafc; --text: #1e293b; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* 头部 */
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #0f172a; }
+        .bio { font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto; }
+        .tags { display: flex; gap: 10px; justify-content: center; margin-top: 15px; flex-wrap: wrap; }
+        .tag { background: #e2e8f0; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; color: #475569; }
+
+        /* 项目卡片 */
+        .section-title { font-size: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 30px; margin-top: 50px; }
+        .project-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; margin-bottom: 25px; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .project-card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .project-name { font-size: 1.3rem; font-weight: 700; color: #0f172a; margin: 0; }
+        .project-type { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); font-weight: 600; background: #eff6ff; padding: 4px 8px; border-radius: 4px; }
+        
+        .tech-stack { margin: 15px 0; color: #64748b; font-size: 0.9rem; font-family: monospace; }
+        .description { margin-bottom: 20px; color: #334155; }
+        
+        .btn { display: inline-block; background: #0f172a; color: white; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; transition: background 0.2s; }
+        .btn:hover { background: #334155; }
+        .btn-outline { background: transparent; border: 1px solid #cbd5e1; color: #475569; margin-left: 10px; }
+        .btn-outline:hover { background: #f1f5f9; }
+
+        footer { text-align: center; margin-top: 80px; color: #94a3b8; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <h1>你好，我是[你的名字] 👋</h1>
-    <p>我喜欢开发各种有趣的小项目。这是我的作品集。</p>
-    
-    <h2>我的项目</h2>
-    
-    <div class="project">
-        <h3>项目 1：(名字待定)</h3>
-        <p>这里以后放项目介绍。</p>
+
+<div class="container">
+    <header>
+        <h1>你好，我是 [你的名字] 👋</h1>
+        <p class="bio">热衷于 AI 工程化落地与全栈开发的开发者。<br>喜欢造轮子，也喜欢做产品。</p>
+        <div class="tags">
+            <span class="tag">Python / PyTorch</span>
+            <span class="tag">TypeScript / React</span>
+            <span class="tag">LLM Agent</span>
+            <span class="tag">Full Stack</span>
+        </div>
+    </header>
+
+    <h2 class="section-title">🚀 精选项目 (Featured Projects)</h2>
+
+    <!-- 项目 1: 深度学习框架 -->
+    <div class="project-card">
+        <div class="card-header">
+            <h3 class="project-name">Deeplearning-Framework</h3>
+            <span class="project-type">ML Infrastructure</span>
+        </div>
+        <div class="tech-stack">Python • PyTorch • Hydra • OmegaConf</div>
+        <p class="description">
+            一个针对多模型、快速试验场景打造的深度学习训练脚手架。
+            重点解决了参数管理混乱的问题，支持模型与训练策略的自由组合，实现了断点续训、自动化日志记录等工程化特性。
+        </p>
+        <div>
+            <a href="https://github.com/你的用户名/Deeplearning-Framework" class="btn">查看代码</a>
+            <!-- 如果有技术文章链接可以放这里 -->
+        </div>
     </div>
-    
-    <div class="project">
-        <h3>项目 2：(名字待定)</h3>
-        <p>这里以后放项目介绍。</p>
+
+    <!-- 项目 2: Obsidian 插件 -->
+    <div class="project-card">
+        <div class="card-header">
+            <h3 class="project-name">Obsidian AI Chat Sidebar</h3>
+            <span class="project-type">AI Product / Plugin</span>
+        </div>
+        <div class="tech-stack">TypeScript • OpenAI API • Obsidian API</div>
+        <p class="description">
+            一个无缝集成到笔记库的 AI 助手插件。
+            支持多模型切换（OpenAI/Anthropic/Local），具备上下文感知的 RAG 能力，支持流式响应与 LaTeX 公式渲染，解决了在笔记软件内直接与知识库交互的需求。
+        </p>
+        <div>
+            <a href="https://github.com/你的用户名/obsidian-ai-sidebar" class="btn">查看代码</a>
+        </div>
     </div>
+
+    <h2 class="section-title">🚧 正在开发 (Working In Public)</h2>
+    
+    <div class="project-card" style="border-style: dashed; background: #fafafa;">
+        <div class="card-header">
+            <h3 class="project-name">Multi-Agent Research Assistant</h3>
+            <span class="project-type">AI Agent</span>
+        </div>
+        <p class="description">
+            正在构建一个基于 LangGraph 的多智能体系统，旨在自动化完成信息检索、总结与报告生成任务。（计划中...）
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 [你的名字]. Hosted on GitHub Pages.</p>
+</footer>
+
 </body>
 </html>

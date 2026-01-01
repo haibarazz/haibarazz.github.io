@@ -1,5 +1,4 @@
-theme: jekyll-theme-cayman
-title: 小徐快跑
-description: AI Engineering & Full Stack Development
-show_downloads: true
-google_analytics:
+theme: jekyll-theme-minimal
+title: 小徐快跑的简历
+description: 管科研究生
+show_downloads: false

@@ -48,8 +48,33 @@
     - "支持文件、文件夹和实时选中文本上下文"
     - "面向长期知识库使用设计会话与复制体验"
 
-- slug: "multi-agent-reviewer"
+- slug: "academic-humanize"
   order: 3
+  title: "Academic Humanize"
+  role: "学术写作后训练"
+  category_id: "training"
+  category_label: "LLM 后训练"
+  status: "Active"
+  visibility: "Public"
+  year: "2026"
+  repo: "https://github.com/haibarazz/academic-humanize"
+  demo: ""
+  featured: true
+  summary: "面向学术英文改写的 LLM 后训练项目，把 AI-like draft 到 human-style academic writing 的转换做成可训练、可评测的工程流程。"
+  impact: "基于 Qwen2.5-7B-Instruct 构建 QLoRA SFT、SPIN-style DPO 和迭代 DPO 流程，在 346 条验证集上同时报告 BERTScore、chrF++、BLEU、TER 与 LLM-as-Judge。"
+  tags:
+    - "Python"
+    - "QLoRA"
+    - "DPO"
+    - "Qwen2.5"
+    - "LLM-as-Judge"
+  highlights:
+    - "构建 SFT 到 DPO-v2 的偏好优化闭环"
+    - "DPO-v2 达到 BERTScore-F1 0.9709 与 Judge Norm 0.9223"
+    - "使用自动语义指标和六维 judge rubric 共同评估"
+
+- slug: "multi-agent-reviewer"
+  order: 4
   title: "Multi-Agent Reviewer System"
   role: "智能体研究工具"
   category_id: "agent"
@@ -73,7 +98,7 @@
     - "覆盖学术写作与代码质量检查场景"
 
 - slug: "zotero-ai-chatsbar"
-  order: 4
+  order: 5
   title: "Zotero AI Chatsbar"
   role: "文献工作流插件"
   category_id: "plugin"

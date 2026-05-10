@@ -61,7 +61,7 @@
   demo: ""
   featured: true
   summary: "面向学术英文改写的 LLM 后训练项目，基于 Qwen2.5-7B-Instruct 训练 LoRA adapter，把 AI-like draft 改写为更自然的 academic writing。"
-  impact: "技术流程覆盖 AH V2 数据构造、QLoRA SFT、SPIN-style DPO、迭代 DPO、本地/API baseline 推理，以及 BERTScore/chrF++/BLEU/TER 与 LLM-as-Judge 组合评测。"
+  impact: "技术流程覆盖 SFT 数据构造、QLoRA 微调、SPIN-style DPO、迭代 DPO、本地/API baseline 推理，以及 BERTScore/chrF++/BLEU/TER 与 LLM-as-Judge 组合评测。"
   tags:
     - "Python"
     - "QLoRA"

@@ -125,7 +125,7 @@ a {
 }
 
 .hero {
-  min-height: 68vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -134,9 +134,8 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
   gap: 44px;
-  align-items: end;
-  padding: 52px 0 44px;
-  flex: 1;
+  align-items: center;
+  padding: 78px 0 44px;
 }
 
 .kicker,
@@ -250,6 +249,42 @@ h1 {
 
 .profile-line strong {
   font-size: 1rem;
+}
+
+.focus-strip {
+  padding: 0 0 58px;
+}
+
+.focus-strip h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.45rem, 2.8vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+}
+
+.focus-item {
+  min-height: 160px;
+  padding: 1.15rem;
+  background: var(--panel);
+}
+
+.focus-item strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--rust);
+  font-size: 1.02rem;
+}
+
+.focus-item p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .section {
@@ -440,12 +475,13 @@ h1 {
   }
 
   .hero-grid,
+  .focus-grid,
   .section-heading {
     grid-template-columns: 1fr;
   }
 
   .hero-grid {
-    padding-top: 36px;
+    padding-top: 44px;
   }
 
   h1 {
@@ -457,6 +493,14 @@ h1 {
   }
 
   .project-card {
+    min-height: auto;
+  }
+
+  .focus-strip {
+    padding-bottom: 46px;
+  }
+
+  .focus-item {
     min-height: auto;
   }
 }

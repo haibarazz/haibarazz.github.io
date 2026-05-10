@@ -12,3 +12,10 @@ stats:
     value: "Python / TypeScript"
   - label: "关注"
     value: "LLM Agent / RAG"
+interests:
+  - title: "LLM Agent 与评估"
+    text: "多角色协作、任务拆解、工具调用、评审覆盖率与可追踪评估流程。"
+  - title: "RAG 与知识工作流"
+    text: "文献阅读、Obsidian/Zotero、长文档检索和个人知识库上下文组织。"
+  - title: "AI 工程化"
+    text: "训练脚手架、插件产品、配置系统和可持续迭代的全栈工具。"

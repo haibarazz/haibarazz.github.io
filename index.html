@@ -28,6 +28,7 @@ layout: null
           <span>{{ profile.title }}</span>
         </a>
         <div class="nav-links">
+          <a href="#focus">方向</a>
           <a href="#projects">项目</a>
           <a href="{{ profile.github }}">GitHub</a>
           <a href="mailto:{{ profile.email }}">邮箱</a>
@@ -58,6 +59,18 @@ layout: null
           </div>
         </aside>
       </div>
+
+      <section class="focus-strip" id="focus" aria-labelledby="focus-title">
+        <h2 id="focus-title">感兴趣方向</h2>
+        <div class="focus-grid">
+          {% for interest in profile.interests %}
+          <article class="focus-item">
+            <strong>{{ interest.title }}</strong>
+            <p>{{ interest.text }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
     </header>
 
     <main id="content">

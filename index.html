@@ -19,19 +19,18 @@ layout: null
     {% assign profile = site.data.profile %}
     {% assign projects = site.data.projects | sort: "order" %}
     {% assign categories = projects | map: "category_id" | uniq %}
-    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="skip-link" href="#content">跳到正文</a>
 
     <header class="site-shell hero" id="top">
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="主导航">
         <a class="brand" href="#top" aria-label="{{ profile.name }} homepage">
           <span class="brand-mark">XR</span>
           <span>{{ profile.title }}</span>
         </a>
         <div class="nav-links">
-          <a href="#focus">Focus</a>
-          <a href="#projects">Projects</a>
+          <a href="#projects">项目</a>
           <a href="{{ profile.github }}">GitHub</a>
-          <a href="mailto:{{ profile.email }}">Email</a>
+          <a href="mailto:{{ profile.email }}">邮箱</a>
         </div>
       </nav>
 
@@ -41,12 +40,12 @@ layout: null
           <h1 id="hero-title">{{ profile.headline }}</h1>
           <p>{{ profile.summary }}</p>
           <div class="hero-actions">
-            <a class="button" href="#projects">View projects</a>
-            <a class="button secondary" href="{{ profile.github }}">GitHub profile</a>
+            <a class="button" href="{{ profile.github }}">GitHub</a>
+            <a class="button secondary" href="mailto:{{ profile.email }}">邮箱</a>
           </div>
         </section>
 
-        <aside class="hero-panel" aria-label="Profile snapshot">
+        <aside class="hero-panel" aria-label="个人信息">
           {% for stat in profile.stats %}
           <div class="profile-line">
             <span>{{ stat.label }}</span>
@@ -54,7 +53,7 @@ layout: null
           </div>
           {% endfor %}
           <div class="profile-line">
-            <span>Contact</span>
+            <span>联系</span>
             <strong><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></strong>
           </div>
         </aside>
@@ -62,42 +61,15 @@ layout: null
     </header>
 
     <main id="content">
-      <section class="site-shell section compact" id="focus" aria-labelledby="focus-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Working direction</p>
-            <h2 id="focus-title">从研究想法到可运行工具。</h2>
-          </div>
-          <p>{{ profile.availability }}</p>
-        </div>
-
-        <div class="focus-grid">
-          <article class="focus-item">
-            <strong>AI 工程化</strong>
-            <p>把模型调用、训练流程、评估指标和配置系统整理成可以复用的工程入口。</p>
-          </article>
-          <article class="focus-item">
-            <strong>研究工作流</strong>
-            <p>围绕论文阅读、审稿、知识库和文献管理，做贴近日常使用的 AI 工具。</p>
-          </article>
-          <article class="focus-item">
-            <strong>全栈产品</strong>
-            <p>用快速原型验证需求，再把核心流程沉淀成稳定、清晰、可维护的应用。</p>
-          </article>
-        </div>
-      </section>
-
       <section class="site-shell section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Selected work</p>
-            <h2 id="projects-title">项目目录</h2>
+            <h2 id="projects-title">项目经历</h2>
           </div>
-          <p>公开项目、进行中的研究工具和后续准备上传的项目放在同一个结构里维护。</p>
         </div>
 
-        <div class="filterbar" aria-label="Project filters">
-          <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <div class="filterbar" aria-label="项目筛选">
+          <button type="button" data-filter="all" aria-pressed="true">全部</button>
           {% for category_id in categories %}
             {% assign first_project = projects | where: "category_id", category_id | first %}
             <button type="button" data-filter="{{ category_id }}" aria-pressed="false">{{ first_project.category_label }}</button>
@@ -108,7 +80,7 @@ layout: null
           {% for project in projects %}
           <article class="project-card{% if project.featured %} is-featured{% endif %}" data-category="{{ project.category_id }}">
             <div class="project-meta">
-              <span>{{ project.visibility }} / {{ project.status }}</span>
+              <span>{{ project.category_label }}</span>
               <span>{{ project.year }}</span>
             </div>
             <h3>{{ project.title }}</h3>
@@ -116,7 +88,7 @@ layout: null
             <p class="project-summary">{{ project.summary }}</p>
             <p class="project-impact">{{ project.impact }}</p>
 
-            <ul class="tag-list" aria-label="{{ project.title }} tech stack">
+            <ul class="tag-list" aria-label="{{ project.title }} 技术栈">
               {% for tag in project.tags %}
               <li>{{ tag }}</li>
               {% endfor %}
@@ -128,33 +100,27 @@ layout: null
               {% endfor %}
             </ul>
 
+            {% if project.repo != "" or project.demo != "" %}
             <div class="project-links">
               {% if project.repo != "" %}
-              <a href="{{ project.repo }}">Source</a>
-              {% else %}
-              <span>Source pending</span>
+              <a href="{{ project.repo }}">GitHub</a>
               {% endif %}
               {% if project.demo != "" %}
               <a href="{{ project.demo }}">Demo</a>
               {% endif %}
             </div>
+            {% endif %}
           </article>
           {% endfor %}
         </div>
       </section>
 
-      <section class="site-shell section compact" aria-labelledby="update-title">
-        <div class="note-band">
-          <h2 id="update-title">后续新增项目，只维护数据。</h2>
-          <p>主页内容来自 <code>_data/projects.yml</code>。新增仓库、demo、标签、状态或项目描述后，GitHub Pages 会在 push 到 <code>main</code> 后自动重新生成页面；本地不需要安装 Jekyll。</p>
-        </div>
-      </section>
     </main>
 
     <footer class="site-shell footer">
       <div class="footer-row">
-        <span>© 2026 {{ profile.name }}. Hosted on GitHub Pages.</span>
-        <span><a href="mailto:{{ profile.email }}">Contact</a> · <a href="#top">Back to top</a></span>
+        <span>© 2026 {{ profile.name }}</span>
+        <span><a href="{{ profile.github }}">GitHub</a> · <a href="mailto:{{ profile.email }}">邮箱</a></span>
       </div>
     </footer>
 

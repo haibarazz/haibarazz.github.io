@@ -1,0 +1,145 @@
+- slug: "deeplearning-framework"
+  order: 1
+  title: "Deeplearning-Framework"
+  role: "ML infrastructure"
+  category_id: "ml"
+  category_label: "ML 工程"
+  status: "Active"
+  visibility: "Public"
+  year: "2026"
+  repo: "https://github.com/haibarazz/Deeplearning-Framework"
+  demo: ""
+  featured: true
+  summary: "面向多模型快速实验的深度学习训练脚手架，用 Hydra/OmegaConf 管理模型、训练策略和任务配置。"
+  impact: "支持分类、回归、断点续训、日志落地和 30+ 传统机器学习模型 benchmark，适合把实验从单脚本推进到可复用工作流。"
+  tags:
+    - "Python"
+    - "PyTorch"
+    - "Hydra"
+    - "OmegaConf"
+    - "Benchmark"
+  highlights:
+    - "用组合式 YAML 配置替代硬编码训练参数"
+    - "统一深度学习训练与传统 ML 对比入口"
+    - "保留训练日志、CSV 和 checkpoint，方便复盘"
+
+- slug: "obsidian-ai-chat"
+  order: 2
+  title: "Obsidian AI Chat Sidebar"
+  role: "AI product plugin"
+  category_id: "plugin"
+  category_label: "插件产品"
+  status: "Active"
+  visibility: "Public"
+  year: "2026"
+  repo: "https://github.com/haibarazz/obsidian-ai-chat"
+  demo: ""
+  featured: true
+  summary: "集成到 Obsidian 笔记库里的 AI 聊天侧边栏，让模型可以结合笔记、选中文本和上下文进行对话。"
+  impact: "支持多提供商模型、流式响应、会话管理、Markdown/LaTeX 渲染和本地隐私优先的数据存储方式。"
+  tags:
+    - "TypeScript"
+    - "Obsidian API"
+    - "OpenAI-compatible API"
+    - "Markdown"
+    - "LaTeX"
+  highlights:
+    - "把 AI 对话入口嵌入真实笔记工作流"
+    - "支持文件、文件夹和实时选中文本上下文"
+    - "面向长期知识库使用设计会话与复制体验"
+
+- slug: "multi-agent-reviewer"
+  order: 3
+  title: "Multi-Agent Reviewer System"
+  role: "Research agent"
+  category_id: "agent"
+  category_label: "Agent 研究"
+  status: "Working draft"
+  visibility: "Case study"
+  year: "2026"
+  repo: ""
+  demo: ""
+  featured: true
+  summary: "面向论文与代码审查的多智能体评审系统，探索初审、领域专家、语言修订等角色之间的协作。"
+  impact: "目标是把单模型审查拆成可追踪的多轮讨论、证据提取和共识生成流程，服务学术写作与代码质量检查。"
+  tags:
+    - "LLM Agent"
+    - "Evaluation"
+    - "OpenReview"
+    - "Workflow"
+  highlights:
+    - "关注评审意见覆盖率与可解释审查过程"
+    - "适合展示 Agent workflow 与评估设计能力"
+    - "后续可补充公开 demo 或技术文章"
+
+- slug: "zotero-ai-chatsbar"
+  order: 4
+  title: "Zotero AI Chatsbar"
+  role: "Research workflow plugin"
+  category_id: "plugin"
+  category_label: "插件产品"
+  status: "Prototype"
+  visibility: "Public"
+  year: "2026"
+  repo: "https://github.com/haibarazz/Zotero-ai-chatsbar"
+  demo: ""
+  featured: false
+  summary: "围绕 Zotero 7 插件体系探索文献管理中的 AI 对话入口，把阅读、摘录和问答连接到同一工作台。"
+  impact: "当前以插件工程骨架和交互探索为主，后续适合补齐 README、截图和可安装 release。"
+  tags:
+    - "TypeScript"
+    - "Zotero 7"
+    - "Plugin"
+    - "Research Tooling"
+  highlights:
+    - "面向文献管理场景延伸 AI 助手能力"
+    - "复用 Zotero 插件模板与工具链"
+    - "可作为后续公开项目的孵化位"
+
+- slug: "mineru-chat"
+  order: 5
+  title: "Mineru Chat"
+  role: "Document AI"
+  category_id: "agent"
+  category_label: "Agent 研究"
+  status: "Planned"
+  visibility: "Public"
+  year: "2026"
+  repo: "https://github.com/haibarazz/Mineru-chat"
+  demo: ""
+  featured: false
+  summary: "计划把 PDF 解析、论文结构化和对话检索连接起来，形成面向文档理解的轻量交互助手。"
+  impact: "仓库已创建，适合作为后续补充 demo、数据流说明和项目截图的位置。"
+  tags:
+    - "Document AI"
+    - "PDF"
+    - "RAG"
+    - "Prototype"
+  highlights:
+    - "保留公开入口，方便后续持续上传项目"
+    - "适合连接文献阅读和知识库工作流"
+    - "后续补齐可运行样例后可升级为精选项目"
+
+- slug: "daily-workflow-planner"
+  order: 6
+  title: "Full-Stack Daily Planner"
+  role: "Workflow product"
+  category_id: "fullstack"
+  category_label: "全栈产品"
+  status: "Planned"
+  visibility: "Concept"
+  year: "2026"
+  repo: ""
+  demo: ""
+  featured: false
+  summary: "面向个人工作流的任务与计划管理系统，目标是把日计划、复盘和任务调整做成可持续使用的工具。"
+  impact: "后续公开仓库后，只需要在这个数据文件里补充 repo/demo 链接即可自动出现在主页中。"
+  tags:
+    - "React"
+    - "FastAPI"
+    - "Planning"
+    - "Product"
+  highlights:
+    - "从 To-Do List 扩展到计划复盘与动态调整"
+    - "适合展示从需求到产品体验的全栈能力"
+    - "可与 Obsidian/日记工作流连接"

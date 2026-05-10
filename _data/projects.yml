@@ -1,5 +1,30 @@
-- slug: "deeplearning-framework"
+- slug: "academic-humanize"
   order: 1
+  title: "Academic Humanize"
+  role: "学术写作后训练"
+  category_id: "training"
+  category_label: "LLM 后训练"
+  status: "Active"
+  visibility: "Public"
+  year: "2026"
+  repo: "https://github.com/haibarazz/academic-humanize"
+  demo: ""
+  featured: true
+  summary: "面向学术英文改写的 LLM 后训练项目，基于 Qwen2.5-7B-Instruct 训练 LoRA adapter，把 AI-like draft 改写为更自然的 academic writing。"
+  impact: "技术流程覆盖 SFT 数据构造、QLoRA 微调、SPIN-style DPO、迭代 DPO、本地/API baseline 推理，以及 BERTScore/chrF++/BLEU/TER 与 LLM-as-Judge 组合评测。"
+  tags:
+    - "Python"
+    - "QLoRA"
+    - "DPO"
+    - "Qwen2.5"
+    - "LLM-as-Judge"
+  highlights:
+    - "用 QLoRA 在 7B 基座上训练低成本 SFT adapter"
+    - "用模型生成 rejected response 构造 DPO 偏好数据"
+    - "用自动语义指标和六维 judge rubric 评估改写质量"
+
+- slug: "deeplearning-framework"
+  order: 2
   title: "Deeplearning-Framework"
   role: "机器学习基础设施"
   category_id: "ml"
@@ -24,7 +49,7 @@
     - "保留训练日志、CSV 和 checkpoint，支持结果复盘"
 
 - slug: "obsidian-ai-chat"
-  order: 2
+  order: 3
   title: "Obsidian AI Chat Sidebar"
   role: "AI 插件产品"
   category_id: "plugin"
@@ -47,31 +72,6 @@
     - "把 AI 对话入口嵌入真实笔记工作流"
     - "支持文件、文件夹和实时选中文本上下文"
     - "面向长期知识库使用设计会话与复制体验"
-
-- slug: "academic-humanize"
-  order: 3
-  title: "Academic Humanize"
-  role: "学术写作后训练"
-  category_id: "training"
-  category_label: "LLM 后训练"
-  status: "Active"
-  visibility: "Public"
-  year: "2026"
-  repo: "https://github.com/haibarazz/academic-humanize"
-  demo: ""
-  featured: true
-  summary: "面向学术英文改写的 LLM 后训练项目，基于 Qwen2.5-7B-Instruct 训练 LoRA adapter，把 AI-like draft 改写为更自然的 academic writing。"
-  impact: "技术流程覆盖 SFT 数据构造、QLoRA 微调、SPIN-style DPO、迭代 DPO、本地/API baseline 推理，以及 BERTScore/chrF++/BLEU/TER 与 LLM-as-Judge 组合评测。"
-  tags:
-    - "Python"
-    - "QLoRA"
-    - "DPO"
-    - "Qwen2.5"
-    - "LLM-as-Judge"
-  highlights:
-    - "用 QLoRA 在 7B 基座上训练低成本 SFT adapter"
-    - "用模型生成 rejected response 构造 DPO 偏好数据"
-    - "用自动语义指标和六维 judge rubric 评估改写质量"
 
 - slug: "multi-agent-reviewer"
   order: 4

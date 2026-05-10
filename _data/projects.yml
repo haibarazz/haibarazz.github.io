@@ -25,28 +25,28 @@
 
 - slug: "deeplearning-framework"
   order: 2
-  title: "Deeplearning-Framework"
-  role: "机器学习基础设施"
+  title: "ReproFlow"
+  role: "AI 论文复现实验框架"
   category_id: "ml"
   category_label: "ML 工程"
   status: "Active"
   visibility: "Public"
   year: "2026"
-  repo: "https://github.com/haibarazz/Deeplearning-Framework"
+  repo: "https://github.com/haibarazz/ReproFlow"
   demo: ""
   featured: true
-  summary: "面向多模型快速实验的深度学习训练脚手架，用 Hydra/OmegaConf 管理模型、训练策略和任务配置。"
-  impact: "整合分类、回归、断点续训、日志落地和 30+ 传统机器学习模型 benchmark，减少实验配置分散的问题。"
+  summary: "面向 AI 辅助论文复现的可复现实验框架，把论文方法接入自定义数据集，并在统一数据、指标、seed 和 baseline 下进行公平对比。"
+  impact: "技术上用 Hydra 配置组织 data/model/trainer/metrics，提供 data adapter、doctor 检查、paper_methods scaffold、传统 ML baseline、多 seed、调参、消融和 experiment runner。"
   tags:
     - "Python"
     - "PyTorch"
     - "Hydra"
-    - "OmegaConf"
-    - "Benchmark"
+    - "Data Adapter"
+    - "AI Reproduction"
   highlights:
-    - "用组合式 YAML 配置替代硬编码训练参数"
-    - "统一深度学习训练与传统 ML 对比入口"
-    - "保留训练日志、CSV 和 checkpoint，支持结果复盘"
+    - "用配置统一数据 schema、模型、trainer 和 metric"
+    - "通过 adapter/dataset 接入 tabular、推荐系统和图数据形态"
+    - "内置 AI 复现规范、论文方法模板、doctor 检查和 1 epoch smoke check"
 
 - slug: "obsidian-ai-chat"
   order: 3

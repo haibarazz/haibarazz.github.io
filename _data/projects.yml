@@ -10,8 +10,8 @@
   repo: "https://github.com/haibarazz/academic-humanize"
   demo: ""
   featured: true
-  summary: "面向学术英文改写的 LLM 后训练项目，基于 Qwen2.5-7B-Instruct 训练 LoRA adapter，把 AI-like draft 改写为更自然的 academic writing。"
-  impact: "技术流程覆盖 SFT 数据构造、QLoRA 微调、SPIN-style DPO、迭代 DPO、本地/API baseline 推理，以及 BERTScore/chrF++/BLEU/TER 与 LLM-as-Judge 组合评测。"
+  summary: "面向学术英文改写中 AI-like 表达明显、句式模板化、语义保真难控制的问题，构建一套面向 academic writing humanization 的本地后训练流程。"
+  impact: "项目以 Qwen2.5-7B-Instruct 为基座，先构造 AI-like draft -> human/reference revision 的 SFT 样本，用 QLoRA 训练低成本 LoRA adapter；随后使用 SFT/DPO 模型自身生成 rejected response，构造 SPIN-style DPO 与迭代 DPO 偏好数据，让模型在保持原意、术语、数字和逻辑关系的前提下减少 AI 写作痕迹。评测侧同时接入 BERTScore、chrF++、BLEU、TER 等语义/编辑距离指标，以及六维 LLM-as-Judge rubric，综合评估语义保真、自然度、术语准确性和编辑价值。"
   tags:
     - "Python"
     - "QLoRA"
@@ -19,9 +19,9 @@
     - "Qwen2.5"
     - "LLM-as-Judge"
   highlights:
-    - "用 QLoRA 在 7B 基座上训练低成本 SFT adapter"
-    - "用模型生成 rejected response 构造 DPO 偏好数据"
-    - "用自动语义指标和六维 judge rubric 评估改写质量"
+    - "构造 AI-like draft -> human/reference revision 的 SFT 样本"
+    - "用模型自身输出构造 SPIN-style DPO 与迭代 DPO 偏好数据"
+    - "用语义/编辑距离指标和六维 judge rubric 综合评估"
 
 - slug: "deeplearning-framework"
   order: 2
@@ -35,8 +35,8 @@
   repo: "https://github.com/haibarazz/ReproFlow"
   demo: ""
   featured: true
-  summary: "面向 AI 辅助论文复现的可复现实验框架，把论文方法接入自定义数据集，并在统一数据、指标、seed 和 baseline 下进行公平对比。"
-  impact: "技术上用 Hydra 配置组织 data/model/trainer/metrics，提供 data adapter、doctor 检查、paper_methods scaffold、传统 ML baseline、多 seed、调参、消融和 experiment runner。"
+  summary: "面向 AI 辅助论文复现中“模型代码容易生成，但数据结构、训练入口、指标口径、基线方法、随机种子和消融实验难以统一”的问题，构建一个可配置、可扩展的深度学习实验框架。"
+  impact: "项目使用 Hydra 将数据、模型、训练器、评估指标和训练循环拆分为独立配置层，通过数据适配器与数据集抽象支持表格数据、推荐系统和图数据等不同输入形态，并提供 doctor 检查数据列、任务类型、训练器和指标是否匹配。论文复现侧提供论文方法脚手架、AI 操作规范和经典论文示例，将论文方法拆解为模型实现、模型配置和训练配置；实验侧支持传统机器学习基线、多随机种子、网格调参、消融实验和统一实验运行器，用一致的数据、指标和随机种子比较论文方法与基线结果。"
   tags:
     - "Python"
     - "PyTorch"
@@ -44,9 +44,9 @@
     - "Data Adapter"
     - "AI Reproduction"
   highlights:
-    - "用配置统一数据 schema、模型、trainer 和 metric"
-    - "通过 adapter/dataset 接入 tabular、推荐系统和图数据形态"
-    - "内置 AI 复现规范、论文方法模板、doctor 检查和 1 epoch smoke check"
+    - "用 Hydra 将数据、模型、训练器、指标和训练循环拆成配置层"
+    - "通过数据适配器与数据集抽象支持表格、推荐系统和图数据"
+    - "支持论文方法脚手架、传统机器学习基线、多随机种子、调参和消融"
 
 - slug: "obsidian-ai-chat"
   order: 3

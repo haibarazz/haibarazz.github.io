@@ -342,10 +342,23 @@ h1 {
   text-transform: uppercase;
 }
 
-.stack-row strong {
+.stack-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.stack-pills strong {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.26rem 0.62rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fffef8;
   color: var(--ink);
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.82rem;
+  line-height: 1;
 }
 
 .section {

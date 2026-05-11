@@ -79,7 +79,11 @@ layout: null
             <p>{{ profile.workflow.text }}</p>
             <div class="stack-row" aria-label="工程栈">
               <span>工程栈</span>
-              <strong>{{ profile.workflow.stack | join: " / " }}</strong>
+              <div class="stack-pills">
+                {% for item in profile.workflow.stack %}
+                <strong>{{ item }}</strong>
+                {% endfor %}
+              </div>
             </div>
           </div>
         </div>

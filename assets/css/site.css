@@ -252,7 +252,7 @@ h1 {
 }
 
 .focus-strip {
-  padding: 0 0 58px;
+  padding: 0 0 28px;
 }
 
 .focus-strip h2 {
@@ -285,6 +285,32 @@ h1 {
 .focus-item p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.stack-strip {
+  padding: 0 0 60px;
+}
+
+.stack-panel {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding: 1.15rem;
+  border: 1px solid var(--ink);
+  background: var(--panel);
+}
+
+.stack-panel h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.35rem, 2.6vw, 2.35rem);
+  line-height: 1.08;
+}
+
+.stack-panel p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.03rem;
 }
 
 .section {
@@ -476,6 +502,7 @@ h1 {
 
   .hero-grid,
   .focus-grid,
+  .stack-panel,
   .section-heading {
     grid-template-columns: 1fr;
   }
@@ -497,11 +524,15 @@ h1 {
   }
 
   .focus-strip {
-    padding-bottom: 46px;
+    padding-bottom: 26px;
   }
 
   .focus-item {
     min-height: auto;
+  }
+
+  .stack-strip {
+    padding-bottom: 46px;
   }
 }
 

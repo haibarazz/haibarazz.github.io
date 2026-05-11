@@ -317,11 +317,47 @@ h1 {
   line-height: 1.08;
 }
 
-.stack-panel p {
+.stack-content p {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.8;
+}
+
+.stack-row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.stack-row span {
+  color: var(--rust);
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.stack-row ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack-row li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.26rem 0.55rem;
+  color: var(--ink);
+  background: #fffef8;
+  font-size: 0.8rem;
 }
 
 .section {
@@ -544,6 +580,11 @@ h1 {
 
   .stack-strip {
     padding-bottom: 46px;
+  }
+
+  .stack-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 }
 

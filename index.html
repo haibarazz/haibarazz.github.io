@@ -75,7 +75,17 @@ layout: null
       <section class="stack-strip" aria-labelledby="stack-title">
         <div class="stack-panel">
           <h2 id="stack-title">{{ profile.workflow.title }}</h2>
-          <p>{{ profile.workflow.text }}</p>
+          <div class="stack-content">
+            <p>{{ profile.workflow.text }}</p>
+            <div class="stack-row" aria-label="工程栈">
+              <span>工程栈</span>
+              <ul>
+                {% for item in profile.workflow.stack %}
+                <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </header>

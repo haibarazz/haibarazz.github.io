@@ -342,22 +342,10 @@ h1 {
   text-transform: uppercase;
 }
 
-.stack-row ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.stack-row li {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.26rem 0.55rem;
+.stack-row strong {
   color: var(--ink);
-  background: #fffef8;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .section {

@@ -75,21 +75,7 @@ layout: null
       <section class="stack-strip" aria-labelledby="stack-title">
         <div class="stack-panel">
           <h2 id="stack-title">{{ profile.workflow.title }}</h2>
-          <div class="stack-content">
-            <p>{{ profile.workflow.text }}</p>
-            <div class="stack-groups" aria-label="技术栈与工具">
-              {% for group in profile.workflow.groups %}
-              <div class="stack-group">
-                <span>{{ group.label }}</span>
-                <ul>
-                  {% for item in group.items %}
-                  <li>{{ item }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
+          <p>{{ profile.workflow.text }}</p>
         </div>
       </section>
     </header>

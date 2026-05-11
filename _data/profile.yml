@@ -22,22 +22,3 @@ interests:
 workflow:
   title: "技术栈与 AI 工作流"
   text: "熟悉 Python、PyTorch、Hydra 与前端插件开发；日常使用 Codex、Claude Code、Cursor 辅助代码重构、实验脚手架搭建、论文复现、文档整理与测试验证。关注将 AI 工具接入真实研究和工程流程，平时喜欢开发有助于提高效率的工具。"
-  groups:
-    - label: "工程栈"
-      items:
-        - "Python"
-        - "PyTorch"
-        - "Hydra"
-        - "TypeScript"
-        - "前端插件"
-    - label: "AI 工具链"
-      items:
-        - "Codex"
-        - "Claude Code"
-        - "Cursor"
-    - label: "研究工作流"
-      items:
-        - "实验脚手架"
-        - "论文复现"
-        - "文档整理"
-        - "测试验证"
